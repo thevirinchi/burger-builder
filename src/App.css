@@ -1,15 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat&family=Roboto&display=swap');
+
+h{font-family: 'Montserrat', sans-serif;}
+body{font-family: 'Roboto', sans-serif;}
+.App-logo-text{font-family: 'Bangers', cursive;}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 32px;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 15s linear;
   }
 }
 
@@ -24,10 +30,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +37,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.min-h-100{
+  min-height: 100vh;
+}
+
+.dis-flex{
+  display: flex;
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
+.all-center {
+  align-items: center !important;
+  justify-content: center !important;
 }
