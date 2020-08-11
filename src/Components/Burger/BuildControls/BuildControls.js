@@ -15,7 +15,7 @@ const BuildControls = (props) =>{
             ))}
             <div className="container card shadow-sm w-75 mt-5 p-4 dis-fflex flex-col all-center">
                 Your total is: <br/><span><h3 className="mb-0">{props.total}</h3></span>
-                <button className="btn btn-success mt-4">Check Out</button>
+                <button className="btn btn-success mt-4">ORDER NOW</button>
             </div>
         </div>
     );
