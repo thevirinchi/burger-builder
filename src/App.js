@@ -1,26 +1,28 @@
-import React from 'react';
+import React, {Component, Fragment} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar/Navbar';
+import BurgerBuilder from './Containers/BurgerBuilder/BurgerBuilder';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  state = {
+    navBarItems: [
+      { id: 'builder', name: 'Builder', target: '/', active: true },
+      { id: 'checkout', name: 'Check Out', target: '/check-out', active: false }
+    ]
+  }
+
+  render(){
+    return (
+      <div className="App">
+          <Fragment>
+            <Navbar logo={logo} items={this.state.navBarItems}/>
+            <BurgerBuilder/>
+          </Fragment>
+      </div>
+    )
+  }
 }
 
 export default App;
