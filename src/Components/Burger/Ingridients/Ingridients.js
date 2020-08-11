@@ -1,27 +1,28 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import classes from '../../../assets/css/Ingridients.css';
+import classes from './ingridients.module.css';
 
 class Ingridients extends Component{
     render(){
-        switch(props.type){
+        let ingridient = null;
+        switch(this.props.type){
             case ('bread-bottom'):
-                ingridient = <div className={classes.BreadBottom}></div>;
+                ingridient = <div className={classes.BreadBottom}></div>
                 break;
             case ('bread-top'):
-                ingridient = <div className={classes.BreadTop}>
-                                <div className={classes.Seeds1}></div>;
-                                <div className={classes.Seeds2}></div>;
-                            </div>;
+                ingridient = (<div className={classes.BreadTop}>
+                                <div className={classes.Seeds1}></div>
+                                <div className={classes.Seeds2}></div>
+                            </div>);
                 break;
             case ('cheese'):
-                    ingridient = <div className={classes.Cheese}></div>;
-                    break;
+                ingridient = <div className={classes.Cheese}></div>
+                break;
             case ('salad'):
-                ingridient = <div className={classes.Salad}></div>;
+                ingridient = <div className={classes.Salad}></div>
                 break;
             default:
-                console.log("Error: Invalid ingridient detected: " + props.type);
+                console.log("Error: Invalid ingridient detected: " + this.props.type);
                 ingridient = null;
         }
 
