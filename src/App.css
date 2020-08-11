@@ -55,3 +55,15 @@ body{font-family: 'Roboto', sans-serif;}
   align-items: center !important;
   justify-content: center !important;
 }
+
+.h-45{
+  height: 45vh !important;
+}
+
+.w-50{
+  min-width: 50px;
+}
+
+.w-200{
+  min-width: 200px;
+}
